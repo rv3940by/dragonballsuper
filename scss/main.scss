@@ -1,0 +1,121 @@
+@import "config";
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-bar {
+    position: fixed;
+    background: $primary-color;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        width: 200px;
+        margin-left: 0.5rem;
+        cursor: pointer;
+
+        img {
+            width: 200px;
+            height: 3.6rem;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 2.5rem;
+
+        .list-item {
+            list-style: none;
+            margin-left: 1.5rem;
+            padding: 0 0.5rem;
+            padding-bottom: 5px;
+
+            &.active {
+                border-bottom: 2px solid red;
+
+                .list-link {
+                    color: $secondary-color;
+                }
+            }
+
+            .list-link {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fff;
+
+                &:hover {
+                    color: $secondary-color;
+                    @include easeOut;
+                }
+            }
+        }
+
+    }
+}
+
+.overlay {
+    height: 95vh;
+    position: absolute;
+    margin-top: 0.05rem;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: darken(#000000, 1);
+    opacity: 0.87;
+    z-index: -1;
+}
+
+main {
+    height: 80vh;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .greet {
+        font-size: 2.5rem;
+        margin-top: 4rem;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        text-shadow: 0 0 3px #000;
+
+        .text-secondary {
+            color: #eece1a;
+            text-shadow: 2px 4px 5px #000;
+        }
+
+        hr {
+            color: #000;
+            opacity: 0.5;
+        }
+    }
+
+    .video {
+        margin-top: 5vh;
+
+        video {
+            width: 90%;
+            height: 50%;
+            padding: 1.5rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            background: #000;
+            box-shadow: 0 0 1rem #000;
+        }
+    }
+}
+
+@import "mobile";

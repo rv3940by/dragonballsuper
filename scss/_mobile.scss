@@ -1,0 +1,117 @@
+// Widescreens
+@include mediaXl {
+    .nav-bar {
+
+        .logo {
+            
+            img {
+                width: 200px;
+                height: 3.6rem;
+            }
+        }
+    }
+
+    main {
+
+        .video {
+            
+
+            video {
+                width: 100vh;
+            }
+        }
+    }
+}
+
+// Desktop & Laptops
+@include mediaLg {
+
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+
+        .logo {
+            width: 21rem;
+
+            img {
+                width: 350px;
+                height: 5rem;
+            }
+        }
+
+        ul {
+
+            .list-item {
+
+                .list-link {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    main {
+        margin-top: 10vh;
+
+        .greet {
+            font-size: 25px;
+        }
+
+        .video {
+
+            video {
+                width: 45vh;
+            }
+        }
+    }
+}
+
+// Smartphones
+@include mediaSm {
+    .nav-bar {
+        height: 10rem;
+
+        .logo {
+            width: 20rem;
+            margin-right: 1rem;
+
+            img {
+                width: 350px;
+                height: 6rem;
+            }
+        }
+
+        ul {
+            width: 23.5rem;
+
+            .list-item {
+
+                .list-link {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    main {
+        margin-top: 10vh;
+
+        .greet {
+            font-size: 20px;
+        }
+
+        .video {
+            display: flex;
+            justify-content: center;
+
+            video {
+                width: 33vh;
+                height: 21vh;
+            }
+        }
+    }
+}

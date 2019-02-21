@@ -2,11 +2,26 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: $primary-color;
+    @include background;
+    height: 100%;
+    color: $primary-color;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Gloal */
+.text-dark {
+    color: $text-dark;
+}
+
+.text-light {
+    color: $text-light;
 }
 
 .nav-bar {
     position: fixed;
-    background: $primary-color;
+    background: darken($primary-color, 15);
     top: 0;
     right: 0;
     left: 0;
@@ -59,36 +74,17 @@ body {
     }
 }
 
-.overlay {
-    height: 95vh;
-    position: absolute;
-    margin-top: 0.05rem;
-    top: 3rem;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: darken(#000000, 1);
-    opacity: 0.87;
-    z-index: -1;
-}
-
 main {
-    height: 80vh;
-    position: absolute;
-    top: 3rem;
-    left: 0;
-    right: 0;
+    min-height: calc(95vh - 50px);
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .greet {
         font-size: 2.5rem;
-        margin-top: 4rem;
+        margin-top: 15vh;
         text-align: center;
-        color: white;
         text-transform: uppercase;
         text-shadow: 0 0 3px #000;
 
@@ -116,6 +112,194 @@ main {
             box-shadow: 0 0 1rem #000;
         }
     }
+
+    .container {
+        width: 90%;
+        background: lighten($primary-color, 5);
+        padding: 1rem 1.5rem;
+        border-bottom: 5px solid $secondary-color;
+
+        h3 {
+            letter-spacing: 3px;
+            color: $secondary-color;
+            text-transform: uppercase;
+        }
+
+        .sub-container {
+            
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+
+            .character-container {
+                width: 100%;
+                height: 80%;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 0 0 5px #222;;
+                text-align: center;
+    
+                img {
+                    width: 50%;
+                    height: 90%;
+                }
+    
+                .character-name {
+                    letter-spacing: 5px;
+                    padding: 0.5rem;
+                    background: #eece1a;
+                    border-bottom-right-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        background: $secondary-color;
+
+                        a {
+                            color: $text-light;
+                            text-shadow: 0 0 5px $text-dark;
+                        }
+                    }
+    
+                    a {
+                        text-decoration: none;
+                        font-weight: 500;
+                        color: #222;
+                    }
+                }
+            }
+        }
+
+        .character-info {
+            margin-bottom: 2vh;
+            display: grid;
+            justify-items: center;
+
+            img {
+                width: 20%;
+                margin-bottom: 2vh;
+            }
+            
+            .description {
+                background: #888;
+                padding: 1rem;
+                width: 96%;
+                border-radius: 10px;
+            }
+        }
+
+        .character-suggestion-container {
+            padding: 1rem;
+            background: lighten($primary-color, 10);
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+
+            .image-container {
+                width: 60%;
+                height: 60%;
+                border-radius: 5px;
+                box-shadow: 0 0 5px #222;
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .character-name {
+                    padding: 0.5rem;
+                    width: 93%;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    background: #eece1a;
+                    text-align: center;
+                    
+                    &:hover {
+                        background: $secondary-color;
+                        
+                        a {
+                            color: #fff;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        color: $text-dark;
+                    }
+                }
+            }
+        }
+    }
+
+    .video-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .video-title {
+            margin-top: 5vh;
+            width: 50vh;
+            color: #eece1a;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: #eece1a;
+            }
+
+        }
+
+        video {
+            width: 50vh;
+            margin-top: 2vh;
+            border-radius: 3px;
+            box-shadow: 0 0 1rem #000;
+        }
+    }
+
+    .break-line {
+        margin-top: 4vh;
+        width: 90%;
+    }
+
+    .video-suggestion {
+        margin-top: 5vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5rem;
+
+        .video-card {
+            box-shadow: 0 0 5px #888;
+            border-radius: 5px;
+
+            img {
+                width: 10vw;
+            }
+            
+            .video-title {
+                color: #eece1a;
+                text-align: center;
+            }
+        }
+    }
+}
+
+#main-footer {
+    text-align: center;
+    padding: 0.5rem;
+    background: darken($primary-color, 20);
+    color: #ccc;
+    line-height: 50px;
+    height: 50px;
 }
 
 @import "mobile";

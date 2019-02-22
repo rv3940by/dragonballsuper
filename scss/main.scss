@@ -254,6 +254,15 @@ main {
             a {
                 text-decoration: none;
                 color: #eece1a;
+
+                &:hover {
+                    color: #555;
+                    transition: 300ms;
+                }
+            }
+
+            .title {
+                font-size: 1.5rem;
             }
 
         }
@@ -274,15 +283,16 @@ main {
     .video-suggestion {
         margin-top: 5vh;
         display: grid;
+        width: 50%;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 5rem;
+        grid-gap: 1rem;
 
         .video-card {
             box-shadow: 0 0 5px #888;
             border-radius: 5px;
 
             img {
-                width: 10vw;
+                width: 100%;
             }
             
             .video-title {

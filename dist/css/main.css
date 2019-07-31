@@ -76,8 +76,7 @@ main {
   align-items: center; }
   main .greet {
     font-size: 2.5rem;
-    margin: 0 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-align: center;
     text-transform: uppercase;
     text-shadow: 0 0 3px #000; }
@@ -123,19 +122,22 @@ main {
       text-transform: uppercase; }
     main .container .sub-container {
       display: grid;
-      grid-gap: 20px;
+      grid-gap: 0 20px;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(8, 1fr); }
+      grid-template-rows: repeat(8, 1fr);
+      align-items: center; }
       main .container .sub-container .character-container {
         width: 100%;
         height: 80%;
         border: none;
+        background: #1f1f1f;
         border-radius: 5px;
         box-shadow: 0 0 5px #222;
         text-align: center; }
         main .container .sub-container .character-container img {
           width: 50%;
-          height: 90%; }
+          height: 90%;
+          padding: 1rem; }
         main .container .sub-container .character-container .character-name {
           letter-spacing: 5px;
           padding: 0.5rem;
@@ -163,19 +165,22 @@ main {
       main .container .character-info .description {
         background: #999;
         padding: 1rem;
-        width: 96%;
+        width: 100%;
         border-radius: 10px; }
         main .container .character-info .description .text {
           color: #111; }
     main .container .character-suggestion-container {
-      background: #4d4d4d;
-      padding: 0.8rem;
+      background: #666666;
+      padding: 0 0.8rem 0 0.8rem;
+      border-radius: 5px;
       display: grid;
+      grid-gap: 10px;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr); }
       main .container .character-suggestion-container .image-container {
         width: 60%;
         height: 60%;
+        background: #1f1f1f;
         border-radius: 5px;
         box-shadow: 0 0 5px #222;
         display: flex;
@@ -302,16 +307,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; }
+    height: 100%;
+    width: 100%; }
     main .container .character-suggestion-container .image-container {
       width: 100%;
-      margin: 0 0.5rem; }
+      margin: 1rem 0.5rem; }
       main .container .character-suggestion-container .image-container img {
         width: 50%;
         height: 20rem;
-        padding: 0.5rem 0; }
+        padding: 1rem 0; }
       main .container .character-suggestion-container .image-container .character-name {
-        width: 96%; }
+        width: 100%; }
   .video-section .video-title {
     width: 20vh;
     cursor: pointer; }
@@ -344,16 +350,19 @@ main {
     font-size: 0.7rem; }
   main .container .character-suggestion-container {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center; }
+    padding: 1rem 0;
+    grid-column-gap: 0;
+    grid-row-gap: 15px;
+    justify-items: center; }
     main .container .character-suggestion-container .image-container {
-      width: 80%;
-      padding: 1rem; }
+      width: 90%;
+      height: 90%; }
       main .container .character-suggestion-container .image-container img {
-        width: 60%; }
+        width: 50%;
+        height: 15rem;
+        padding: 1rem; }
       main .container .character-suggestion-container .image-container .character-name {
-        width: 110%; }
+        width: 100%; }
         main .container .character-suggestion-container .image-container .character-name a {
           width: 100%; }
   .video-section {
@@ -413,8 +422,8 @@ main {
       main .container .character-suggestion-container {
         grid-template-columns: repeat(2, 1fr); }
         main .container .character-suggestion-container .image-container {
-          width: 80%;
-          height: 70%; }
+          width: 90%;
+          height: 90%; }
           main .container .character-suggestion-container .image-container img {
             width: 30%;
             height: 10rem;
@@ -483,14 +492,14 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    padding: 1rem; }
     main .container .character-suggestion-container .image-container {
       width: 100%;
-      margin-top: 2vh; }
+      margin: 0.5rem 0; }
       main .container .character-suggestion-container .image-container img {
         width: 30%;
-        height: 15rem;
-        padding: 0.5rem; }
+        height: 15rem; }
       main .container .character-suggestion-container .image-container .character-name {
         width: 100%; }
   main .video-suggestion {

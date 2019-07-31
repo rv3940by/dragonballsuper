@@ -80,19 +80,20 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+        width: 100%;
 
         .image-container {
           width: 100%;
-          margin: 0 0.5rem;
+          margin: 1rem 0.5rem;
 
           img {
             width: 50%;
             height: 20rem;
-            padding: 0.5rem 0;
+            padding: 1rem 0;
           }
 
           .character-name {
-            width: 96%;
+            width: 100%;
           }
         }
       }
@@ -167,20 +168,23 @@
 
       .character-suggestion-container {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        padding: 1rem 0;
+        grid-column-gap: 0;
+        grid-row-gap: 15px;
         justify-items: center;
-        align-items: center;
 
         .image-container {
-          width: 80%;
-          padding: 1rem;
+          width: 90%;
+          height: 90%;
 
           img {
-            width: 60%;
+            width: 50%;
+            height: 15rem;
+            padding: 1rem;
           }
 
           .character-name {
-            width: 110%;
+            width: 100%;
 
             a {
               width: 100%;
@@ -289,8 +293,8 @@
         grid-template-columns: repeat(2, 1fr);
 
         .image-container {
-          width: 80%;
-          height: 70%;
+          width: 90%;
+          height: 90%;
 
           img {
             width: 30%;
@@ -425,15 +429,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
 
         .image-container {
           width: 100%;
-          margin-top: 2vh;
+          margin: 0.5rem 0;
 
           img {
             width: 30%;
             height: 15rem;
-            padding: 0.5rem;
           }
 
           .character-name {
